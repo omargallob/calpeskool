@@ -1,1 +1,2 @@
-<li><%= image_tag images.photo.url(:thumb) %></li>
+<li><%= image_tag images.photo.url(:thumb) if controller.controller_name == "home" %>
+	<%= image_tag images.photo.url(:pagesize) if controller.controller_name == "galleries" %></li>

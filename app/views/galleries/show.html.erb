@@ -1,0 +1,4 @@
+	<h2 class="gallery"><%= link_to @gallery.title, gallery_show_path(@gallery.title.gsub(/ /,"-")) %></h2>
+	<ul class="gallery">
+		<%= render :partial => "shared/front/images", :collection => @gallery.uploads %>
+	</ul>
