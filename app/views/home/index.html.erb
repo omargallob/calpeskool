@@ -2,7 +2,8 @@
 	<%= @page.body %>
 <% else %>	
 	<% @galleries.each do |gallery|%>
-		<ul>
+		<h2 class="gallery"><%= gallery.title %></h2>
+		<ul class="gallery">
 			<%= render :partial => "shared/front/images", :collection => gallery.uploads %>
 		</ul>
 	<% end %>

@@ -10,6 +10,7 @@
 
 * li{
 	margin-left:50px;
+
 }
 
 * p {
@@ -622,6 +623,13 @@ dl.accordion dd dl dd dl dd dl dd.accordion_content
 
 .gallerythumbcontainer {
 	padding:10px 5px 10px 5px;
+}
+.content h2.gallery {
+	margin: 0 0 8px 47px;
+	color: #2372B6;
+}
+ul.gallery li{
+		list-style: none;
 }
 
 /* END Image Gallery */
