@@ -625,11 +625,24 @@ dl.accordion dd dl dd dl dd dl dd.accordion_content
 	padding:10px 5px 10px 5px;
 }
 .content h2.gallery {
-	margin: 0 0 8px 47px;
+	margin: 40px 0 20px 0px;
 	color: #2372B6;
+	float: left;
+}
+ul.gallery{
+	width: 100%;
+	float: left;
+	margin-left: 0px;
 }
 ul.gallery li{
 		list-style: none;
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
 }
+ul.gallery li a img{
+	border: 0px none;
+}
+
 
 /* END Image Gallery */
