@@ -2,8 +2,8 @@ ActionController::Routing::Routes.draw do |map|
  
      map.namespace :admin do |admin|
        # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-       admin.resources :pages
-       admin.resources :galleries, :has_many => :uploads
+       admin.resources :pages, :path_prefix => "/:locale/admin"
+       admin.resources :galleries, :has_many => :uploads,  :path_prefix => "/admin/:locale"
        admin.root :controller => "overview"
     end
 
@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resource :session
-  map.view_page ':name', :controller => 'home', :action => 'index'
+  map.view_page '/:locale/:name', :controller => 'home', :action => 'index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

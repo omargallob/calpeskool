@@ -1,6 +1,6 @@
 <ul id="nav">
 	<% for page in @pages %>
-		<li><%= link_to page.navlabel, view_page_path(page.name.gsub(/ /,"-")) if page.subpages.empty? %>
+		<li><%= link_to page.navlabel, view_page_path(I18n.locale,page.name.gsub(/ /,"-")) if page.subpages.empty? %>
 		<%= link_to page.navlabel, "#" unless page.subpages.empty? %>
 		 	<% if page.subpages.empty? %>
 			
@@ -8,14 +8,14 @@
 				<ul>
 					<% for subpage in page.subpages %>
 						<li>
-						<%= link_to subpage.navlabel, view_page_path(subpage.name.gsub(/ /,"-"))  %>
+						<%= link_to subpage.navlabel, view_page_path(I18n.locale,subpage.name.gsub(/ /,"-"))  %>
 						
 							<% if subpage.subpages.empty? %>
 							
 							<% else %>
 								<ul>
 									<% for subpage in subpage.subpages %>
-										<li><%= link_to subpage.navlabel, view_page_path(subpage.name.gsub(/ /,"-")) %></li>
+										<li><%= link_to subpage.navlabel, view_page_path(I18n.locale,subpage.name.gsub(/ /,"-")) %></li>
 									<% end %>
 								</ul>
 							<% end %>

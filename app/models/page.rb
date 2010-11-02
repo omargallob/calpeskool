@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
  has_many :subpages, :class_name => 'Page', :foreign_key => 'parent_id'
  belongs_to :parent, :class_name => 'Page', :foreign_key => 'parent_id'
-
+  translates :title, :navlabel, :body
   #has_many :galleries
   
   def self.find_main

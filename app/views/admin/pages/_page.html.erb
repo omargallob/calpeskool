@@ -7,6 +7,9 @@
 <% end %>
 
 
+<td class="title"><%=h truncate(page.name, 15) %></td>
+
+
 
 	<td class="title"><%=h truncate(page.title, 15) %></td>
 
@@ -14,9 +17,9 @@
 	<td>
 	<table class="nolines">
 		<tr>
-			<td><%= link_to(image_tag('system/admin/buttons/search.jpg', :height => "15px", :title => "show"), admin_page_path(page)) %></td><td>&nbsp;|&nbsp;</td>
-			<td><%= link_to(image_tag('system/admin/buttons/edit.jpg', :height => "15px", :title => "edit"), edit_admin_page_path(page)) %></td><td>&nbsp;|&nbsp;</td>
-			<td><%= link_to(image_tag('system/admin/buttons/delete.jpg', :height => "15px", :title => "delete"), admin_page_path(page), :confirm => 'Are you sure?', :method => :delete) %></td>
+			<td><%= link_to(image_tag('system/admin/buttons/search.jpg', :height => "15px", :title => "show"), admin_page_path(I18n.locale,page)) %></td><td>&nbsp;|&nbsp;</td>
+			<td><%= link_to(image_tag('system/admin/buttons/edit.jpg', :height => "15px", :title => "edit"), edit_admin_page_path(I18n.locale,page)) %></td><td>&nbsp;|&nbsp;</td>
+			<td><%= link_to(image_tag('system/admin/buttons/delete.jpg', :height => "15px", :title => "delete"), admin_page_path(I18n.locale,page), :confirm => 'Are you sure?', :method => :delete) %></td>
 		</tr>                      
 	</table>	
 	</td>

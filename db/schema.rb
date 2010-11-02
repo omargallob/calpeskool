@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100520203112) do
+ActiveRecord::Schema.define(:version => 20101102230034) do
 
   create_table "galleries", :force => true do |t|
     t.string   "title"
@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(:version => 20100520203112) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "page_translations", :force => true do |t|
+    t.integer  "page_id"
+    t.string   "locale"
+    t.string   "navlabel"
+    t.text     "body"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "page_translations", ["page_id"], :name => "index_page_translations_on_page_id"
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -45,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20100520203112) do
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
-    t.string   "name",                      :limit => 100, :default => ""
+    t.string   "name",                      :limit => 100
     t.string   "email",                     :limit => 100
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40

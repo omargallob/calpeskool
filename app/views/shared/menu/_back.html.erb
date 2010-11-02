@@ -1,7 +1,7 @@
 <% if logged_in? %>
 <ul class="backend">
 	<li><a href="/admin">OVERVIEW</a></li>
-	<li><a href="/admin/pages">Pages</a></li>
+	<li><%= link_to "Pages", admin_pages_path %></li>
 	<li><a href="/admin/galleries">Gallery</a></li>
 </ul> 
 <% end %>
