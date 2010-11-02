@@ -61,7 +61,7 @@
 
 /* Parent Main Menu Links ---[javascript users only]*/
 .mainMenuParentBtn{	
-	 background: url(../images/system/all/sidebar.png) right center no-repeat; 
+	 background: url(../images/system/all/sidebar_arrow.png) right center no-repeat; 
 }
 
 /* Parent Main Menu Links on hover or focus ---[javascript users only]*/
@@ -121,13 +121,13 @@
 /* main menu ul or ol elment */
 #nav{
 	display:block;
-	position: absolute;
+/*	position: absolute; */
 	list-style:none;
-	margin:0 0 0 -155px;
+	margin:0 0 0 -35px;
 	width:245px;
 	z-index:5;
 	top:175px;
-	left:29%;
+/*	left:29%; */
 	text-align: right;
 	display:block;
 }
